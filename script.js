@@ -1,4 +1,4 @@
-window.onload = function() {
+/*window.onload = function() {
 
 var current,
     screen,
@@ -115,4 +115,5 @@ var elem = document.querySelectorAll(".num");
     },false);
           
       }   
-}
+}*/
+
