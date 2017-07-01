@@ -117,3 +117,4 @@ var elem = document.querySelectorAll(".num");
       }   
 }*/
 
+console.log('hi');
