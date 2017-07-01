@@ -1,66 +1,56 @@
-/*body {
-  background:#777;
+body {
+  background: #ffe4e1;
 }
-
 #background {
-    width:300px;
-    height:400px;
-    background:gray;
-    margin:50px auto;
-    -webkit-animation:bgChange 2s 2s alternate infinite;
-    transition: all 2s ease;
+  width: 300px;
+  height: 400px;
+  background: gray;
+  margin: 50px auto;
+  -webkit-animation: bgChange 2s 2s alternate infinite;
+  transition: all 2s ease;
 }
-
-button {
-    border:0;
-    color:#fff;
+span {
+  border: 0;
+  color: #fff;
 }
-
-#result {
-    display:block;
-    font-family: sans-serif;
-    width:230px;
-    height:40px;
-    margin:10px auto;
-    text-align: right;
-    border:0;
-    background:#3b3535;
-    color:#fff;
-    padding-top:20px;
-    font-size:20px;
-    margin-left: 25px;
-    outline: none;
-    overflow: hidden;
-    letter-spacing: 4px;
-    position: relative;
-    top:10px;
+#readout {
+  display: block;
+  font-family: sans-serif;
+  width: 83%;
+  height: 10%;
+  margin: 10px auto;
+  text-align: right;
+  border: 0;
+  background: #3b3535;
+  color: #fff;
+  padding-top: 20px;
+  font-size: 20px;
+  margin-left: 25px;
+  outline: none;
+  overflow: hidden;
+  letter-spacing: 4px;
+  position: relative;
+  top: 10px;
 }
-
 #result:hover {
-    
-    cursor: text;
-    
+  cursor: text;
 }
-
-#first-rows {
-    margin-bottom: 20px;
-    position: relative;
-    top:10px;
+#row1 {
+  margin-bottom: 20px;
+  position: relative;
+  top: 10px;
 }
-
-.rows {
-    width:300px;
-    margin-top:10px;
+.row {
+  width: 300px;
+  margin-top: 10px;
 }
-
-#delete {
-    width:110px;
-    height:50px;
-    margin-left:25px;
-    border-radius:4px;
+#clear {
+  width: 110px;
+  height: 50px;
+  margin-left: 25px;
+  border-radius: 4px;
 }
-
--- Aligning the division and dot button properly --
+/*-- Aligning the division and dot button properly --
 .fall-back {
     margin-left:3px !important;
 }
@@ -68,16 +58,14 @@ button {
 == Aligning the addition and equals to button properly ==
 .align {
     margin-left: 6px !important;
+}*/
+.num {
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  border-radius: 4px;
 }
-
-== Button styling ==
-.btn-style {
-    width:50px;
-    height:50px;
-    margin-left:5px;
-    border-radius:4px;
-}
-
+/*
 .eqn {
     width:50px;
     height:50px;
@@ -87,28 +75,24 @@ button {
 
 .first-child {
  margin-left:25px;
+}*/
+.num-bg {
+  background: #000;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  outline: none;
+  border-bottom: 3px solid #333;
 }
-
-
-== Adding background color to the number values ==
- .num-bg {
-    background:#000;
-    color:#fff;
-    font-size:26px;
-    cursor:pointer;
-    outline:none;
-    border-bottom:3px solid #333;
+.num-bg:active {
+  background: #000;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: inset 5px 5px 5px #555;
 }
-
- .num-bg:active {
-    background:#000;
-    color:#fff;
-    font-size:26px;
-    cursor:pointer;
-    outline:none;
-    box-shadow: inset 5px 5px 5px #555;
-}
-
+/*
 == Adding background color to the operator values == 
 .opera-bg {
     background:#333;
