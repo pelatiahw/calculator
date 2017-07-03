@@ -57,6 +57,14 @@ for(var i = 0; i < keys.length; i++) {
 		e.preventDefault();
 	} 
 }
+function highlight(target) {
+    var initial = target.style.backgroundColor;
+    target.style.backgroundColor = 'yellow';
+
+    setTimeout(function() {
+        target.style.backgroundColor = initial;
+    }, 100);
+}
 });
 
-Console.log('num');
+console.log('hi.');

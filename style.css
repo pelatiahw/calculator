@@ -1,20 +1,3 @@
-/*
-<body>
-  <div>
-    <h1>The <em>Universal</em> Selector</h1>
-    <p>We must <em>emphasize</em> the following:</p>
-    <ul>
-      <li>It's <em>not</em> a wildcard.</li>
-      <li>It matches elements regardless of <em>type</em>.</li>
-    </ul>
-    This is an <em>immediate</em> child of the division.
-  </div>
-</body>
-
-* {
-  margin: 0;
-  padding: 0;
-}*/
 * {
   box-sizing: border-box;
 }
@@ -27,16 +10,6 @@
   padding: 1em 2em;
   border-radius: 10px;
 }
-/* #clear .clear {
-  {
-  text-align: center;
-  border: 1px solid black;
-  float: left;
-  height: 40px;
-  width: 25%;
-  background-color: white;
-  line-height: 40px;
-} not working for some reason I made and id/div/container, but it's not working...*/
 #calculator .readout {
   height: 2em;
   width: 100%;
@@ -66,15 +39,3 @@
 .clearfix::after {
   clear: both;
 }
-
-
-
-/*Less (sometimes stylized as LESS) is a dynamic style sheet language
-that can be compiled into Cascading Style Sheets (CSS) and run on the client
-side or server side.[2] Designed by Alexis Sellier, Less is influenced by Sass
-and has influenced the newer "SCSS" syntax of Sass, which adapted its CSS-like block
-formatting syntax.
-
-
-
-CSS is USELESS! >:)*/
