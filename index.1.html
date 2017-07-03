@@ -10,44 +10,29 @@
 </head>
 </head>
 <body>
-    <div class="calculator">
-
-        <div id="background"> <!-- My main background -->
-
-            <div id="readout"></div>
-
-            
-            <div id="keys">
-                    <span class="clr-btn" id="clear">clear</span>
-
-                <div id="row1">
-                    <span class="num num-style firstnum" id="num-7">7</span>
-                    <span class="num num-style" id="num-8">8</span>
-                    <span class="num num-style" id="num-9">9</span>
-                    <span class="num num-style symbol symbol-bckgrnd" id="divide">÷</span>
-                </div>
-
-                <div id="row2">
-                    <span class="num num-style firstnum" id="num-4">4</span>
-                    <span class="num num-style" id="num-5">5</span>
-                    <span class="num num-style" id="num-6">6</span>
-                    <span class="num num-style symbol symbol-bckgrnd" id="multiply">*</span>
-                </div>
-
-                <div id="row3">
-                    <span class="num num-style firstnum" id="num-1">1</span>
-                    <span class="num num-style" id="num-2">2</span>
-                    <span class="num num-style" id="num-3">3</span>
-                    <span class="num symbol symbol-bckgrnd" id="subtract">-</span>
-                </div>
-
-                <div id="row4">
-                    <span class="num" id="num-0">0</span>
-                    <span class="num num-style symbol symbol-bckg" id="decimal">.</span>
-                    <span class="num equal symbol" id="equal">=</span>
-                    <span class="num num-style symbol symbol-bckgrnd" id="add">+</span>
-                </div>
-            </div>
+   <div id="calculator" class="clearfix">
+        <div class="readout"></div>
+        <div class="keys">
+            <span class="num clear" id="clear">c</span>
+            <span class="num"></span>
+            <span class="num"></span>
+            <span class="num"></span>
+            <span class="num" id="num-7">7</span>
+            <span class="num" id="num-8">8</span>
+            <span class="num" id="num-9">9</span>
+            <span class="num operator" id="divide">÷</span>
+            <span class="num" id="num-4">4</span>
+            <span class="num" id="num-5">5</span>
+            <span class="num" id="num-6">6</span>
+            <span class="num operator" id="multiply">*</span>
+            <span class="num" id="num-1">1</span>
+            <span class="num" id="num-2">2</span>
+            <span class="num" id="num-3">3</span>
+            <span class="num operator" id="subtract">-</span>
+            <span class="num zero" id="num-0">0</span>
+            <span class="num symbol decimal" id="decimal">.</span>
+            <span class="num symbol equal" id="equal">=</span>
+            <span class="num operator" id="add">+</span>
         </div>
     </div>
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -55,3 +40,5 @@
     crossorigin="anonymous"></script>
 </body>
 </html>
+
+<!-- for some reason my clear is missplaced...........-->

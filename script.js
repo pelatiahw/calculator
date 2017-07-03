@@ -1,120 +1,62 @@
-/*window.onload = function() {
+document.addEventListener("DOMContentLoaded", function(event) {
 
-var current,
-    screen,
-    output,
-    limit,
-    zero,
-    period,
-    operator;
-    
-    screen = document.getElementById("result");
+var keys = document.querySelectorAll('#calculator span');
+var operators = ['+', '-', 'x', '÷'];
+var decimalAdded = false;
 
-var elem = document.querySelectorAll(".num");
-    
-      var len = elem.length;
-    
-      for(var i = 0; i < len; i++ ) {
-        
-        elem[i].addEventListener("click",function() {
-                  
-            num = this.value;
-                     
-            output = screen.innerHTML +=num;
-                  
-            limit = output.length;
-         
-         if(limit > 16 ) {
-        
-         alert("Sorry no more input is allowed");
-             
-       }
-       
-     },false);
-        
-    } 
+for(var i = 0; i < keys.length; i++) {
+	keys[i].onclick = function(e) {
+		var input = document.querySelector('.readout');
+		var inputVal = input.innerHTML;
+		var btnVal = this.innerHTML;
+		
+		if(btnVal == 'c') {
+			input.innerHTML = '';
+			decimalAdded = false;
+		}
+		
+		else if(btnVal == '=') {
+			var equation = inputVal;
+			var lastChar = equation[equation.length - 1];
+			
+			equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+			
+			if(operators.indexOf(lastChar) > -1 || lastChar == '.')
+				equation = equation.replace(/.$/, '');
+			
+			if(equation)
+				input.innerHTML = eval(equation);
+				
+			decimalAdded = false;
+		}
+		else if(operators.indexOf(btnVal) > -1) {
+			var lastChar = inputVal[inputVal.length - 1];
+			
+			if(inputVal != '' && operators.indexOf(lastChar) == -1) 
+				input.innerHTML += btnVal;
+			
+			else if(inputVal == '' && btnVal == '-') 
+				input.innerHTML += btnVal;
+			
+			if(operators.indexOf(lastChar) > -1 && inputVal.length > 1) {
 
-    document.querySelector(".zero").addEventListener("click",function() {
-        
-        zero = this.value;
-        
-        if(screen.innerHTML === "") {
-            
-           output = screen.innerHTML = zero;  
-        }
-        
-        else if(screen.innerHTML === output) {
-            
-         output = screen.innerHTML +=zero;
-            
-        }
-          
-    },false);
-    
-    document.querySelector(".period").addEventListener("click",function() {
-        
-        period = this.value;
-        
-        if(screen.innerHTML === "") {
-            
-         output = screen.innerHTML = screen.innerHTML.concat("0.");
-            
-         }
-    
-        else if(screen.innerHTML === output) {
-        
-          screen.innerHTML = screen.innerHTML.concat(".");
-            
-        }
-        
-    },false);
-    
-    
-    document.querySelector("#eqn-bg").addEventListener("click",function() {
-        
-      if(screen.innerHTML === output) {
-          
-        screen.innerHTML = eval(output);
-      }
-        
-      else {
-            screen.innerHTML = "";
-      }
-          
-    },false);
-    
- document.querySelector("#delete").addEventListener("click",function() {
-        
-        screen.innerHTML = "";
-        
-    },false);
-    
-   
-     var elem1 = document.querySelectorAll(".operator");
-    
-      var len1 = elem1.length;
-    
-      for(var i = 0; i < len1; i++ ) {
-        
-        elem1[i].addEventListener("click",function() {
-         
-        operator = this.value;
-         
-         if(screen.innerHTML === "") {
-            
-            screen.innerHTML = screen.innerHTML.concat("");
-            
-        }
-        
-        else if(output) {
-        
-            screen.innerHTML = output.concat(operator);
-            
-        }
-           
-    },false);
-          
-      }   
-}*/
+				input.innerHTML = inputVal.replace(/.$/, btnVal);
+			}
+			
+			decimalAdded =false;
+		}
+		else if(btnVal == '.') {
+			if(!decimalAdded) {
+				input.innerHTML += btnVal;
+				decimalAdded = true;
+			}
+		}
+        else {
+			input.innerHTML += btnVal;
+		}
+		e.preventDefault();
+	} 
+}
+});
 
-console.log('hi');
+Console.log('num');
